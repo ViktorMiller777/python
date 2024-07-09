@@ -1,0 +1,52 @@
+from pymongo import MongoClient, errors
+import json
+import socket
+
+class Connection:
+    def __init__(self, connection_string):
+        self.client = MongoClient(connection_string)
+        self.database = self.client['Uber']
+        self.collection = self.database['Viajes']
+
+    def insertar_datos(self, datos):
+        try:
+            if datos:  # Verifica si datos no está vacío
+                self.collection.insert_many(datos)
+                print("Datos insertados correctamente en MongoDB.")
+                return True
+            else:
+                print("La lista de datos está vacía. No se realizará la inserción.")
+                return False
+        except errors.BulkWriteError as e:
+            print(f"Error al insertar datos en MongoDB: {e}")
+            return False
+
+    def guardar_en_archivo(self, datos, archivo):
+        with open(archivo, 'w') as file:
+            json.dump(datos, file)
+        print(f"Datos guardados en el archivo {archivo}.")
+
+    def cargar_desde_archivo(self, archivo):
+        with open(archivo, 'r') as file:
+            return json.load(file)
+
+    def hay_conexion_internet(self):
+        try:
+            # Intenta conectar con un servidor de Google DNS
+            socket.create_connection(("8.8.8.8", 53), timeout=5)
+            return True
+        except OSError:
+            return False
+
+    def procesar_datos(self, datos, archivo):
+        if self.hay_conexion_internet():
+            if self.insertar_datos(datos):
+                self.guardar_en_archivo([], archivo)
+        else:
+            if datos:  # Verifica si datos no está vacío
+                datos_guardados = self.cargar_desde_archivo(archivo)
+                datos_guardados.extend(datos)
+                self.guardar_en_archivo(datos_guardados, archivo)
+                print("No hay conexión a internet. Los datos han sido guardados localmente.")
+            else:
+                print("No hay conexión a internet y la lista de datos está vacía. No se guardarán datos localmente.")

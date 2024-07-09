@@ -1,0 +1,55 @@
+  """
+    taxi_objeto = Taxi("123","Rojo", "Lambo", "2021", "URUS")
+    taxi1 = Taxi("321","Azul", "Volkswagen", "2020", "Pointer")
+    taxi2 = Taxi("909","Blanco","Xterra","2015","X")
+    taxi3 = Taxi("007","Negro","Honda","2023","Bonito")
+    taxi4 = Taxi("1234","Memin","pelon","Pistolas","pequeno")
+
+    lista_taxi.crear(taxi_objeto)
+    lista_taxi.crear(taxi1)
+    lista_taxi.crear(taxi2)
+    lista_taxi.crear(taxi3)
+    lista_taxi.crear(taxi4)
+    
+    """
+    # taxi_actualizado = Taxi("666","Verde", "KIA", "2019", "LX TA")
+    # lista_taxi.actualizar(1, taxi_actualizado)
+    # lista_taxi.mostrar_lista()
+
+    # lista_taxi.eliminar(0)
+    # lista_taxi.mostrar_lista()
+    
+    # taxi_actualizado.mostrar_objeto()
+    # lista_taxi.mostrar_lista()
+
+    # lista_taxi.mostrar_lista()
+    # taxi2.mostrar_objeto()
+    # lista_taxi.mostrar_lista()
+
+    # taxi5 = Taxi("123","Naranja","Bolillo","God","??????")
+    # print(taxi5)
+
+    # auto = '{"matricula": "ABC123", "color": "rojo", "marca": "Toyota", "modelo": "Corolla", "submarca": "S"}'
+    # taxi_objeto = Taxi.convertir_obj(auto)
+
+    # print("JSON NORMAL")
+    # print(auto)
+    # print("JSON CONVERTIDO A OBJETO")
+    # print(taxi_objeto)
+
+    # lista = lista_taxi.convertir_json()
+
+
+    # print("Diccionario de la lista de taxis: ")
+    # print(lista_taxi.convertir_json())
+
+    # print("Diccionario de objeto taxi: ")
+    # print(taxi5.convertir_json())
+    
+    # taxi = Taxi(matricula="123ABC", color="Rojo", marca="Toyota", modelo="Corolla", submarca="Sedan")
+    # taxi = Taxi(matricula="123ABC", color="Rojo", marca="Toyota", modelo="Corolla", submarca="Sedan")
+
+    # EN la funcion para convertir a un objeto un json vas a necesitar pasarle el documento json y crear el objeto con los datos del constructor del objeto
+    # En acaso deser una lista necesitas utilizar el agregar() de crud para insertar en una lista nueva
+    
+    #datos_json = taxi1.convertir_json()

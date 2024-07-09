@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "nuevo nombre",
+        "paterno": "nuevo petreno",
+        "materno": "nuevo materno ",
+        "rfc": "nuevo rfc",
+        "taxis": [
+            {
+                "matricula: ": 140810418,
+                "color: ": "nuevo color",
+                "marca: ": "nuevo marca",
+                "modelo: ": "nuevo modelo",
+                "submarca: ": "nuevo submarca"
+            }
+        ]
+    },
+    {
+        "nombre": "yo",
+        "paterno": "yo",
+        "materno": "yo",
+        "rfc": "yo",
+        "taxis": [
+            {
+                "matricula: ": 200,
+                "color: ": "negro",
+                "marca: ": "avento",
+                "modelo: ": "1021",
+                "submarca: ": "bigi"
+            }
+        ]
+    },
+    {
+        "nombre": "nuevo",
+        "paterno": "nuevo",
+        "materno": "nuevo",
+        "rfc": "nuevo",
+        "taxis": [
+            {
+                "matricula: ": 66,
+                "color: ": "hagamos",
+                "marca: ": "esta ",
+                "modelo: ": "mierda",
+                "submarca: ": "real"
+            }
+        ]
+    }
+]
