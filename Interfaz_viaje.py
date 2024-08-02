@@ -49,7 +49,7 @@ class Interfaz_viaje:
             archivo = 'datos_viaje.json'
             self.viaje.convertir_json(archivo)
             with open(archivo, 'r') as file:
-                datos = json.load(file)
+                datos = json.load(file) 
 
             self.conexion.collection.insert_many(datos)
             with open(archivo, 'w') as file:
